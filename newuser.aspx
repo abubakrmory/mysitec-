@@ -31,7 +31,7 @@
         <div class="form-group row">
           <label class="col-md-3 col-form-label">Phone</label>
           <div class="col-md-9">
-              <asp:TextBox ID="Phone" class="form-control" placeholder="Enter Your Phone..."  required="" runat="server" autocomplete="off"></asp:TextBox>
+              <asp:TextBox ID="Phone" class="form-control" placeholder="Enter Your Phone..."  required="" runat="server" autocomplete="off" TextMode="Phone"></asp:TextBox>
           </div>
         </div>
         <div class="form-group row">
@@ -49,7 +49,7 @@
         <div class="form-group row">
           <label class="col-md-3 col-form-label">Experience</label>
           <div class="col-md-9">
-            <asp:TextBox ID="Experience" class="form-control" placeholder="Write the number of years of experience"  required="" runat="server" autocomplete="off"></asp:TextBox>
+            <asp:TextBox ID="Experience" class="form-control" placeholder="Write the number of years of experience"  required="" runat="server" autocomplete="off" TextMode="Number"></asp:TextBox>
           </div>
         </div>
         <div class="form-group row">

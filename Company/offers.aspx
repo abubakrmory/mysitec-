@@ -6,14 +6,10 @@
     <div class="container-fluid" style="margin-top: 50px;">
   <h2 class="text-center">View Offers</h2>
   <br />
-         <asp:GridView ID="GridView1" cssClass="table table-bordered table-responsive" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black" HorizontalAlign="Center" DataKeyNames="OfferId">
+         <asp:GridView ID="GridView1" cssClass="table table-bordered table-responsive" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" HorizontalAlign="Center" DataKeyNames="OfferId" OnRowDataBound="GridView1_RowDataBound">
              <Columns>
-                 <asp:CommandField ButtonType="Button" ShowDeleteButton="True" ShowEditButton="True">
-                 <ControlStyle CssClass="btn btn-info" />
-                 <ItemStyle HorizontalAlign="Center" />
-                 </asp:CommandField>
-                 <asp:BoundField DataField="OfferId" HeaderText="OfferId" SortExpression="OfferId" InsertVisible="False" ReadOnly="True" />
-                 <asp:BoundField DataField="CompanyId" HeaderText="CompanyId" SortExpression="CompanyId" ReadOnly="True" />
+                 <asp:BoundField DataField="OfferId" HeaderText="OfferId" SortExpression="OfferId" InsertVisible="False" ReadOnly="True" Visible="False" />
+                 <asp:BoundField DataField="CompanyId" HeaderText="CompanyId" SortExpression="CompanyId" Visible="False" />
                  <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
                  <asp:BoundField DataField="Date" HeaderText="Date" SortExpression="Date" />
                  <asp:BoundField DataField="Qualifications" HeaderText="Qualifications" SortExpression="Qualifications" />
@@ -22,16 +18,15 @@
                  <asp:BoundField DataField="WorkDays" HeaderText="WorkDays" SortExpression="WorkDays" />
                  <asp:BoundField DataField="WorkHours" HeaderText="WorkHours" SortExpression="WorkHours" />
                  <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+                 <asp:HyperLinkField DataNavigateUrlFields="OfferId" DataNavigateUrlFormatString="editoffer.aspx?OfferId={0}" Text="Edit">
+                 <ControlStyle CssClass="btn btn-warning" />
+                 <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                 </asp:HyperLinkField>
+                 <asp:CommandField ButtonType="Button" ShowDeleteButton="True">
+                 <ControlStyle CssClass="btn btn-danger" />
+                 <ItemStyle HorizontalAlign="Center" />
+                 </asp:CommandField>
              </Columns>
-             <FooterStyle BackColor="#CCCCCC" />
-             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-             <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
-             <RowStyle BackColor="White" />
-             <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-             <SortedAscendingCellStyle BackColor="#F1F1F1" />
-             <SortedAscendingHeaderStyle BackColor="#808080" />
-             <SortedDescendingCellStyle BackColor="#CAC9C9" />
-             <SortedDescendingHeaderStyle BackColor="#383838" />
          </asp:GridView>
  </div>
       <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [OfferId], [CompanyId], [Title], [Date], [Qualifications], [Experience], [Salary], [WorkDays], [WorkHours], [Description] FROM [offers] WHERE ([CompanyId] = @CompanyId)" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [offers] WHERE [OfferId] = @original_OfferId AND (([CompanyId] = @original_CompanyId) OR ([CompanyId] IS NULL AND @original_CompanyId IS NULL)) AND (([Title] = @original_Title) OR ([Title] IS NULL AND @original_Title IS NULL)) AND (([Date] = @original_Date) OR ([Date] IS NULL AND @original_Date IS NULL)) AND (([Qualifications] = @original_Qualifications) OR ([Qualifications] IS NULL AND @original_Qualifications IS NULL)) AND (([Experience] = @original_Experience) OR ([Experience] IS NULL AND @original_Experience IS NULL)) AND (([Salary] = @original_Salary) OR ([Salary] IS NULL AND @original_Salary IS NULL)) AND (([WorkDays] = @original_WorkDays) OR ([WorkDays] IS NULL AND @original_WorkDays IS NULL)) AND (([WorkHours] = @original_WorkHours) OR ([WorkHours] IS NULL AND @original_WorkHours IS NULL)) AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL))" InsertCommand="INSERT INTO [offers] ([CompanyId], [Title], [Date], [Qualifications], [Experience], [Salary], [WorkDays], [WorkHours], [Description]) VALUES (@CompanyId, @Title, @Date, @Qualifications, @Experience, @Salary, @WorkDays, @WorkHours, @Description)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [offers] SET [CompanyId] = @CompanyId, [Title] = @Title, [Date] = @Date, [Qualifications] = @Qualifications, [Experience] = @Experience, [Salary] = @Salary, [WorkDays] = @WorkDays, [WorkHours] = @WorkHours, [Description] = @Description WHERE [OfferId] = @original_OfferId AND (([CompanyId] = @original_CompanyId) OR ([CompanyId] IS NULL AND @original_CompanyId IS NULL)) AND (([Title] = @original_Title) OR ([Title] IS NULL AND @original_Title IS NULL)) AND (([Date] = @original_Date) OR ([Date] IS NULL AND @original_Date IS NULL)) AND (([Qualifications] = @original_Qualifications) OR ([Qualifications] IS NULL AND @original_Qualifications IS NULL)) AND (([Experience] = @original_Experience) OR ([Experience] IS NULL AND @original_Experience IS NULL)) AND (([Salary] = @original_Salary) OR ([Salary] IS NULL AND @original_Salary IS NULL)) AND (([WorkDays] = @original_WorkDays) OR ([WorkDays] IS NULL AND @original_WorkDays IS NULL)) AND (([WorkHours] = @original_WorkHours) OR ([WorkHours] IS NULL AND @original_WorkHours IS NULL)) AND (([Description] = @original_Description) OR ([Description] IS NULL AND @original_Description IS NULL))">

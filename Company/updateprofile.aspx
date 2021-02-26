@@ -8,7 +8,7 @@
   <br />
 
          
-       <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="40%" AutoGenerateRows="False" DataKeyNames="CompanyId_" DataSourceID="SqlDataSource1" HorizontalAlign="Center" BorderColor="White" BorderStyle="None" BorderWidth="0px">
+       <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="40%" AutoGenerateRows="False" DataKeyNames="CompanyId_" DataSourceID="SqlDataSource1" HorizontalAlign="Center">
            <Fields>
                <asp:BoundField DataField="CompanyId_" HeaderText="CompanyId_" InsertVisible="False" ReadOnly="True" SortExpression="CompanyId_" />
                <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />

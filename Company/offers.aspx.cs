@@ -11,4 +11,13 @@ public partial class Company_offers : System.Web.UI.Page
     {
 
     }
+
+    protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+            Button db = (Button)e.Row.Cells[11].Controls[0];
+            db.OnClientClick = "return confirm('Are you certain you want to delete this row?');";
+        }
+    }
 }

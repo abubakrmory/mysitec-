@@ -22,6 +22,10 @@
     background: url('img/pattern-1.jpeg') repeat;
     font-size: 12pt;
   }
+  .well {
+    background-color: #fff;
+    border: black solid 1px;
+  }
   </style>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -37,12 +41,16 @@
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
+            <a class="navbar-brand" href="Default.aspx">
+
+        <img alt="Brand" src="img/logo.png" style="width:40px; margin-top:-10px;" />
+      </a>
          <a class="navbar-brand" href="Default.aspx">WOMEN’S JOB CENTER ONLINE</a>
        </div>
        <div id="navbar" class="collapse navbar-collapse">
          <ul class="nav navbar-nav">
            <li><a href="Default.aspx">Company</a></li>
-           
+           <li><a href="addoffer.aspx">Add New Offer</a></li>
            <li><a href="offers.aspx">View Offers</a></li>
 
            <li><a href="updateprofile.aspx">Update Profile</a></li>

@@ -1,22 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "mysite", "http://localhost:53378", "{04EBECD2-3D71-4AE0-877A-F11A101434E0}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "mysite(1)", "http://localhost:1414", "{E5786BF5-8831-4DE7-951C-9A903BB88D3B}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_53378"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_1414"
 		Debug.AspNetCompiler.PhysicalPath = "..\mysite\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53378\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1414\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_53378"
+		Release.AspNetCompiler.VirtualPath = "/localhost_1414"
 		Release.AspNetCompiler.PhysicalPath = "..\mysite\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_53378\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_1414\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
@@ -29,8 +29,8 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{04EBECD2-3D71-4AE0-877A-F11A101434E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04EBECD2-3D71-4AE0-877A-F11A101434E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5786BF5-8831-4DE7-951C-9A903BB88D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5786BF5-8831-4DE7-951C-9A903BB88D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

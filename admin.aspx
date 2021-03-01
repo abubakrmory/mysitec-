@@ -15,9 +15,9 @@
       <br />
       
         <div class="form-group">
-          <label>Username</label>
-          
-            <asp:TextBox ID="username" class="form-control" placeholder="Enter Your Username..."  required="" runat="server" autocomplete="off"></asp:TextBox>
+          <label>Username</label>           
+            <asp:TextBox ID="username" class="form-control" placeholder="Enter Your Username..."   required="" runat="server" autocomplete="off"></asp:TextBox>         
+                 
         </div>
         <div class="form-group">
           <label>Password</label>
@@ -30,6 +30,7 @@
         
   </div>
 </div>
+    
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Admin]"></asp:SqlDataSource>
 </asp:Content>
 

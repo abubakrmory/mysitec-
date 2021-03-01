@@ -11,4 +11,8 @@ public partial class Admin_editcompany : System.Web.UI.Page
     {
 
     }
+    protected void SqlDataSource1_Updated(object sender, SqlDataSourceStatusEventArgs e)
+    {
+        Page.ClientScript.RegisterStartupScript(GetType(), "msgbox", "alert('It has been updated successfully');", true);
+    }
 }

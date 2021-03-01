@@ -6,7 +6,7 @@
     <div class="container-fluid" style="margin-top: 50px;">
   <h2 class="text-center">View Offers</h2>
   <br />
-         <asp:GridView ID="GridView1" cssClass="table table-bordered table-responsive" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" HorizontalAlign="Center" DataKeyNames="OfferId" OnRowDataBound="GridView1_RowDataBound">
+         <asp:GridView ID="GridView1" cssClass="table table-bordered table-responsive table-hover" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" HorizontalAlign="Center" DataKeyNames="OfferId" OnRowDataBound="GridView1_RowDataBound">
              <Columns>
                  <asp:BoundField DataField="OfferId" HeaderText="OfferId" SortExpression="OfferId" InsertVisible="False" ReadOnly="True" Visible="False" />
                  <asp:BoundField DataField="CompanyId" HeaderText="CompanyId" SortExpression="CompanyId" Visible="False" />

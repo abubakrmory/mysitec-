@@ -10,7 +10,7 @@
   
     
 
-    <asp:GridView ID="GridView1" cssClass="table table-bordered table-responsive" runat="server" DataSourceID="SqlDataSource1" Width="100%" AutoGenerateColumns="False" DataKeyNames="CompanyId" HorizontalAlign="Center">
+    <asp:GridView ID="GridView1" cssClass="table table-bordered table-responsive table-hover" runat="server" DataSourceID="SqlDataSource1" Width="100%" AutoGenerateColumns="False" DataKeyNames="CompanyId" HorizontalAlign="Center" OnRowDataBound="GridView1_RowDataBound">
         <Columns>
             <asp:BoundField DataField="CompanyId" HeaderText="CompanyId" InsertVisible="False" ReadOnly="True" SortExpression="CompanyId" />
             <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />

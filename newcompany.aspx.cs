@@ -5,16 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class newuser : System.Web.UI.Page
+public partial class newcompany : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
-    }
-    
-    protected void SqlDataSource1_Inserted(object sender, SqlDataSourceStatusEventArgs e)
-    {
-        Page.ClientScript.RegisterStartupScript(GetType(), "msgbox", "alert('It has been saved successfully');", true);
+
     }
     protected void Button_Click(object sender, EventArgs e)
     {
@@ -28,6 +23,8 @@ public partial class newuser : System.Web.UI.Page
             Page.ClientScript.RegisterStartupScript(GetType(), "msgbox", "alert('" + ex.ToString() + "');", true);
         }
     }
-
-    
+    protected void SqlDataSource1_Inserted(object sender, SqlDataSourceStatusEventArgs e)
+    {
+        Page.ClientScript.RegisterStartupScript(GetType(), "msgbox", "alert('It has been saved successfully');", true);
+    }
 }

@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class user : System.Web.UI.Page
+public partial class company : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -20,13 +20,14 @@ public partial class user : System.Web.UI.Page
         DataTable dt1 = view1.ToTable();
         if (view1.Count != 0)
         {
-            (Session)["UserId"] = dt1.Rows[0][0].ToString();
+            (Session)["CompanyId"] = dt1.Rows[0][0].ToString();
             (Session)["Name"] = dt1.Rows[0][1].ToString();
             (Session)["role"] = "User";
-            Response.Redirect("User/Default.aspx");
+            Response.Redirect("Company/Default.aspx");
 
         }
 
         Page.ClientScript.RegisterStartupScript(GetType(), "msgbox", "alert('Please Check Username & Password !!!');", true);
     }
+    
 }

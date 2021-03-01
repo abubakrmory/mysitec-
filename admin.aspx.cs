@@ -26,7 +26,7 @@ public partial class admin : System.Web.UI.Page
             Response.Redirect("Admin/Default.aspx");
 
         }
-        
-        Page.ClientScript.RegisterStartupScript(GetType(), "msgbox", "alert('Please Check ID & Password !!!');", true);
+
+        Page.ClientScript.RegisterStartupScript(GetType(), "msgbox", "alert('Please Check Username & Password !!!');", true);
     }
 }

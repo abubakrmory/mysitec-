@@ -1,9 +1,9 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="newuser.aspx.cs" Inherits="newuser" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="newcompany.aspx.cs" Inherits="newcompany" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="container" style="margin-top: 20px;">
+<div class="container" style="margin-top: 20px;">
 
 
 
@@ -11,7 +11,7 @@
 
   <div class="row">
     <div class="col-md-6 col-md-offset-3 well">
-      <h2 class="text-center">Create New Account For User (Women)</h2>
+      <h2 class="text-center">Create New Account For Company</h2>
       <br />
       
         <div class="form-group row">

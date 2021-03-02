@@ -12,17 +12,17 @@
             </div>
         </div>
        
-      <h2 class="text-center" > Login Page For Company</h2>
+      <h2 class="text-center heading-title" > Login Page For Company</h2>
       <br />
       
         <div class="form-group">
           <label>Username</label>
           
-            <asp:TextBox ID="username" class="form-control" placeholder="Enter Your Username..."  required="" runat="server" autocomplete="off">stc</asp:TextBox>
+            <asp:TextBox ID="username" class="form-control" placeholder="Enter Your Username..."  required="" runat="server" autocomplete="off"></asp:TextBox>
         </div>
         <div class="form-group">
           <label>Password</label>
-            <asp:TextBox ID="password" class="form-control" placeholder="Enter Your Password..." TextMode="Password" required="" runat="server" autocomplete="off">1234</asp:TextBox>
+            <asp:TextBox ID="password" class="form-control" placeholder="Enter Your Password..." TextMode="Password" required="" runat="server" autocomplete="off"></asp:TextBox>
         </div>
         <div class="form-group">
         <asp:Button ID="Login" runat="server" Text="Login" class="btn btn-success btn-block text-uppercase " OnClick="btn_Login" />

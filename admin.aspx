@@ -11,7 +11,7 @@
                  <asp:Image ID="Image1" runat="server" ImageUrl="~/img/admin.png" Height="100px" ImageAlign="Middle" Width="100px" />
             </div>
         </div>
-      <h2 class="text-center" > Login Page For Admin</h2>
+      <h2 class="text-center heading-title"> Login Page For Admin</h2>
       <br />
       
         <div class="form-group">

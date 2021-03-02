@@ -10,7 +10,8 @@
   <title>WOMEN’S JOB CENTER ONLINE</title>
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet"/>
-  <link href="css/custom.css" rel="stylesheet"/>
+  <link href="css/custom.css" rel="stylesheet"/><link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
  <%-- <link href="css/style.css" rel="stylesheet"/>--%>
   <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
   <style>

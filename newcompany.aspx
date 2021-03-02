@@ -11,7 +11,7 @@
 
   <div class="row">
     <div class="col-md-6 col-md-offset-3 well">
-      <h2 class="text-center">Create New Account For Company</h2>
+      <h2 class="text-center heading-title">Create New Account For Company</h2>
       <br />
       
         <div class="form-group row">

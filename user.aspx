@@ -12,7 +12,7 @@
             </div>
         </div>
        
-      <h2 class="text-center" > Login Page For User</h2>
+      <h2 class="text-center heading-title" > Login Page For User</h2>
       <br />
       
         <div class="form-group">

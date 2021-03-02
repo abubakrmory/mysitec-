@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>women's job center online</title>
   <link rel="stylesheet" href="style.css" />
+    
 </head>
 <body>
     <%--<form id="form1" runat="server">

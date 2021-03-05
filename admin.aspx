@@ -16,12 +16,13 @@
       
         <div class="form-group">
           <label>Username</label>           
-            <asp:TextBox ID="username" class="form-control" placeholder="Enter Your Username..."   required="" runat="server" autocomplete="off"></asp:TextBox>         
-                 
+            <asp:TextBox ID="username" class="form-control" placeholder="Enter Your Username..."    runat="server" autocomplete="off"></asp:TextBox>         
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*" ControlToValidate="username" Display="Dynamic" SetFocusOnError="True" ForeColor="Red"></asp:RequiredFieldValidator>         
         </div>
         <div class="form-group">
           <label>Password</label>
-            <asp:TextBox ID="password" class="form-control" placeholder="Enter Your Password..." TextMode="Password" required="" runat="server" autocomplete="off"></asp:TextBox>
+            <asp:TextBox ID="password" class="form-control" placeholder="Enter Your Password..." TextMode="Password"  runat="server" autocomplete="off"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*" ControlToValidate="password" Display="Dynamic" SetFocusOnError="True" ForeColor="Red"></asp:RequiredFieldValidator>    
         </div>
         <div class="form-group">
         <asp:Button ID="Login" runat="server" Text="Login" class="btn btn-success btn-block text-uppercase " OnClick="btn_Login" />

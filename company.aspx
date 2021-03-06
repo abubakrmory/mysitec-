@@ -27,6 +27,8 @@
                     <asp:Button ID="Login" runat="server" Text="Login" class="btn btn-success btn-block text-uppercase " OnClick="btn_Login" />
                 </div>
                 <a href="newcompany.aspx" style="color: #000;" class="text-center">New Company? Create Account Here.</a>
+                <br />
+                <a href="ForgetPassword.aspx" style="color: #000;" class="text-center">Forget Password</a>
             </div>
         </div>
     </div>

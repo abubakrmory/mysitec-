@@ -10,55 +10,88 @@
       <br />
       
         <div class="form-group row">
-          <label class="col-md-3 col-form-label">Title</label>
-          <div class="col-md-9">
-              <asp:TextBox ID="OfferTitle" class="form-control" placeholder="Enter Title"  required="" runat="server" autocomplete="off"></asp:TextBox>            
+          <label class="col-md-3 col-form-label">Offer Title</label>
+          <div class="col-md-8">
+              <asp:TextBox ID="OfferTitle" class="form-control" placeholder="Enter Title"   runat="server" autocomplete="off"></asp:TextBox>            
           </div>
+            <div class="col-md-1">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Offer Title is Required" Display="Dynamic" ControlToValidate="OfferTitle" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Title only alphabets" Display="Dynamic" ControlToValidate="OfferTitle" ValidationExpression="^[A-Za-z\s]+$" ForeColor="Red" SetFocusOnError="True">*</asp:RegularExpressionValidator>
+                    </div>
         </div>
 
         <div class="form-group row">
-          <label class="col-md-3 col-form-label">Date</label>
-          <div class="col-md-9">
-              <asp:TextBox ID="Date" class="form-control" placeholder="Enter Date"  required="" runat="server" autocomplete="off" TextMode="Date"></asp:TextBox>
+          <label class="col-md-3 col-form-label">Offer Date</label>
+          <div class="col-md-8">
+              <asp:TextBox ID="Date" class="form-control" placeholder="Enter Offer Date"   runat="server" autocomplete="off" TextMode="Date"></asp:TextBox>
           </div>
-        </div>
+             <div class="col-md-1">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Date Offer is Required" Display="Dynamic" ControlToValidate="Date" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                      
+            </div>
+             </div>
         <div class="form-group row">
           <label class="col-md-3 col-form-label">Qualifications</label>
-          <div class="col-md-9">
-                  <asp:TextBox ID="Qualifications" class="form-control" placeholder="Enter Qualifications"  required="" runat="server" autocomplete="off"></asp:TextBox>
-          </div>
+          <div class="col-md-8">
+                  <asp:TextBox ID="Qualifications" class="form-control" placeholder="Enter Qualifications"   runat="server" autocomplete="off"></asp:TextBox>
+                    </div>
+            <div class="col-md-1">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Qualifications is Required" Display="Dynamic" ControlToValidate="Qualifications" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Qualifications only alphabets" Display="Dynamic" ControlToValidate="Qualifications" ValidationExpression="^[A-Za-z\s]+$" ForeColor="Red" SetFocusOnError="True">*</asp:RegularExpressionValidator>
+                    </div>
         </div>
         <div class="form-group row">
           <label class="col-md-3 col-form-label">Experience</label>
-          <div class="col-md-9">
-            <asp:TextBox ID="Experience" class="form-control" placeholder="Write the number of years of experience"  required="" runat="server" autocomplete="off" TextMode="Number"></asp:TextBox>
+          <div class="col-md-8">
+            <asp:TextBox ID="Experience" class="form-control" placeholder="Write the number of years of experience"   runat="server" autocomplete="off" ></asp:TextBox>
           </div>
+            <div class="col-md-1">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Experience is Required" Display="Dynamic" ControlToValidate="Experience" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Experience must be a whole number between 1 and 15" ControlToValidate="Experience" Display="Dynamic" Type="Integer" MaximumValue="15" MinimumValue="1" ForeColor="Red" SetFocusOnError="True">*</asp:RangeValidator>
+                  </div>
         </div>
         <div class="form-group row">
           <label class="col-md-3 col-form-label">Salary</label>
-          <div class="col-md-9">
-            <asp:TextBox ID="Salary" class="form-control" placeholder="Enter Salary"  required="" runat="server" autocomplete="off" TextMode="Number"></asp:TextBox>
+          <div class="col-md-8">
+            <asp:TextBox ID="Salary" class="form-control" placeholder="Enter Salary"   runat="server" autocomplete="off" ></asp:TextBox>
           </div>
+            <div class="col-md-1">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Salary is Required" Display="Dynamic" ControlToValidate="Salary" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="RangeValidator2" runat="server" ErrorMessage="Salary must be a whole number between 15000 and 5000" ControlToValidate="Salary" Display="Dynamic" Type="Integer" MaximumValue="15000" MinimumValue="5000" ForeColor="Red" SetFocusOnError="True">*</asp:RangeValidator>
+                  </div>
         </div>
         <div class="form-group row">
-          <label class="col-md-3 col-form-label">WorkDays</label>
-          <div class="col-md-9">
-            <asp:TextBox ID="WorkDays" class="form-control" placeholder="Enter WorkDays"  required="" runat="server" autocomplete="off" TextMode="Number"></asp:TextBox>
+          <label class="col-md-3 col-form-label">Work Days</label>
+          <div class="col-md-8">
+            <asp:TextBox ID="WorkDays" class="form-control" placeholder="Enter WorkDays"  runat="server" autocomplete="off" ></asp:TextBox>
           </div>
+            <div class="col-md-1">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Work Days are Required" Display="Dynamic" ControlToValidate="WorkDays" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="RangeValidator3" runat="server" ErrorMessage="Work Days must be a whole number between 1 and 6" ControlToValidate="WorkDays" Display="Dynamic" Type="Integer" MaximumValue="6" MinimumValue="1" ForeColor="Red" SetFocusOnError="True">*</asp:RangeValidator>
+                  </div>
         </div>
         <div class="form-group row">
           <label class="col-md-3 col-form-label">WorkHours</label>
-          <div class="col-md-9">
-             <asp:TextBox ID="WorkHours" class="form-control" placeholder="Enter WorkHours"  required="" runat="server" autocomplete="off" TextMode="Number"></asp:TextBox>
+          <div class="col-md-8">
+             <asp:TextBox ID="WorkHours" class="form-control" placeholder="Enter WorkHours"   runat="server" autocomplete="off" ></asp:TextBox>
           </div>
+            <div class="col-md-1">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Work Hours are Required" Display="Dynamic" ControlToValidate="WorkHours" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="RangeValidator4" runat="server" ErrorMessage="Work Hours must be a whole number between 1 and 12" ControlToValidate="WorkHours" Display="Dynamic" Type="Integer" MaximumValue="12" MinimumValue="1" ForeColor="Red" SetFocusOnError="True">*</asp:RangeValidator>
+                  </div>
         </div>
         <div class="form-group row">
           <label class="col-md-3 col-form-label">Description</label>
-          <div class="col-md-9">
-             <asp:TextBox ID="Description" class="form-control" placeholder="Enter Description"  required="" runat="server" autocomplete="off"></asp:TextBox>
+          <div class="col-md-8">
+             <asp:TextBox ID="Description" class="form-control" placeholder="Enter Description"  runat="server" autocomplete="off"></asp:TextBox>
           </div>
+             <div class="col-md-1">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Description is Required" Display="Dynamic" ControlToValidate="Description" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                
+                  </div>
         </div>
         <asp:Button ID="Button" runat="server" Text="Save Offer" class="btn btn-success btn-block" OnClick="Button_Click1"/>    
+     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" DisplayMode="List" HeaderText="Validation errors" />
     </div>
   </div> <!-- row -->
 </div> <!-- container -->

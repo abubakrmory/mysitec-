@@ -14,8 +14,8 @@
                         <asp:TextBox ID="Name" class="form-control" placeholder="Enter Your Name..." runat="server" autocomplete="off"></asp:TextBox>
                     </div>
                     <div class="col-md-1">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Name is Required" Display="Dynamic" ControlToValidate="Name" ForeColor="Red">*</asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Enter only alphabets" Display="Dynamic" ControlToValidate="Name" ValidationExpression="^[A-Z][a-zA-Z]*$" ForeColor="Red">*</asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Name is Required" Display="Dynamic" ControlToValidate="Name" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Enter only alphabets" Display="Dynamic" ControlToValidate="Name" ValidationExpression="^[A-Za-z\s]+$" ForeColor="Red" SetFocusOnError="True">*</asp:RegularExpressionValidator>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -32,8 +32,8 @@
                         <asp:TextBox ID="Phone" class="form-control" placeholder="966xxxxxxxxx" runat="server" autocomplete="off" TextMode="Phone"></asp:TextBox>
                     </div>
                     <div class="col-md-1">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Phone is Required" Display="Dynamic" ControlToValidate="Phone" ForeColor="Red">*</asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Enter only 12 digits" ControlToValidate="Phone" Display="Dynamic" ForeColor="Red" ValidationExpression="[0-9]{10}">*</asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Phone is Required" Display="Dynamic" ControlToValidate="Phone" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Enter only 12 digits" ControlToValidate="Phone" Display="Dynamic" ForeColor="Red" ValidationExpression="[0-9]{12}" SetFocusOnError="True">*</asp:RegularExpressionValidator>
                     </div>
                 </div>
                 <div class="form-group row">
@@ -42,47 +42,54 @@
                         <asp:TextBox ID="Email" class="form-control" placeholder="Enter Your Email..." runat="server" autocomplete="off"></asp:TextBox>
                     </div>
                     <div class="col-md-1">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Email is Required" Display="Dynamic" ControlToValidate="Email" ForeColor="Red">*</asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Enter correct email address" ControlToValidate="Email" Display="Dynamic" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Email is Required" Display="Dynamic" ControlToValidate="Email" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Invalid Email" ControlToValidate="Email" Display="Dynamic" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" SetFocusOnError="True">*</asp:RegularExpressionValidator>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-3 col-form-label">Qualifications</label>
                     <div class="col-md-8">
-                        <asp:TextBox ID="Qualifications" class="form-control" placeholder="Enter Your Qualifications..." required="" runat="server" autocomplete="off"></asp:TextBox>
+                        <asp:TextBox ID="Qualifications" class="form-control" placeholder="Enter Your Qualifications..."  runat="server" autocomplete="off"></asp:TextBox>
                     </div>
                     <div class="col-md-1">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Qualifications is Required" Display="Dynamic" ControlToValidate="Qualifications" ForeColor="Red">*</asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Enter only alphabets" Display="Dynamic" ControlToValidate="Qualifications" ValidationExpression="^[A-Z][a-zA-Z]*$" ForeColor="Red">*</asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Qualifications is Required" Display="Dynamic" ControlToValidate="Qualifications" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Enter only alphabets" Display="Dynamic" ControlToValidate="Qualifications" ValidationExpression="^[A-Za-z\s]+$" ForeColor="Red" SetFocusOnError="True">*</asp:RegularExpressionValidator>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-3 col-form-label">Experience</label>
                     <div class="col-md-8">
-                        <asp:TextBox ID="Experience" class="form-control" placeholder="Write the details of years of experience" required="" runat="server" autocomplete="off"></asp:TextBox>
+                        <asp:TextBox ID="Experience" class="form-control" placeholder="Write the number of years of experience"  runat="server" autocomplete="off"></asp:TextBox>
+                     
                     </div>
                     <div class="col-md-1">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Experience is Required" Display="Dynamic" ControlToValidate="Experience" ForeColor="Red">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Experience is Required" Display="Dynamic" ControlToValidate="Experience" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Experience must be a whole number between 1 and 15" ControlToValidate="Experience" Display="Dynamic" Type="Integer" MaximumValue="15" MinimumValue="1" ForeColor="Red" SetFocusOnError="True">*</asp:RangeValidator>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-3 col-form-label">Username</label>
                     <div class="col-md-8">
-                        <asp:TextBox ID="Username" class="form-control" placeholder="Enter Your Username..." required="" runat="server" autocomplete="off"></asp:TextBox>
+                        <asp:TextBox ID="Username" class="form-control" placeholder="Enter Your Username..." runat="server" autocomplete="off"></asp:TextBox>
 
                     </div>
                     <div class="col-md-1">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Username is Required" Display="Dynamic" ControlToValidate="Username" ForeColor="Red">*</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Username is Required" Display="Dynamic" ControlToValidate="Username" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label class="col-md-3 col-form-label">Password</label>
                     <div class="col-md-8">
-                        <asp:TextBox ID="Password" class="form-control" placeholder="Enter Your Password..." required="" runat="server" autocomplete="off" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="Password" class="form-control" placeholder="Enter Your Password..."  runat="server" autocomplete="off" TextMode="Password"></asp:TextBox>
                     </div>
                     <div class="col-md-1">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Password is Required" Display="Dynamic" ControlToValidate="Password" ForeColor="Red">*</asp:RequiredFieldValidator>
-                    </div>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Password is Required" Display="Dynamic" ControlToValidate="Password" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
+                   <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ErrorMessage="Password must be At least onelower case letter,
+At least oneupper case letter,
+At leastspecial character,
+At least onenumber
+At least 8characters length" ControlToValidate="Password" Display="Dynamic" ForeColor="Red" SetFocusOnError="True" ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&amp;+=]).*$">*</asp:RegularExpressionValidator>    
+                          </div>
                 </div>
                 <asp:Button ID="Button" runat="server" Text="Submit" class="btn btn-success btn-block" OnClick="Button_Click" />
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" DisplayMode="List" HeaderText="Validation errors" />

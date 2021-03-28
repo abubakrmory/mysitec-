@@ -21,7 +21,7 @@
             <asp:BoundField DataField="Experience" HeaderText="Experience" SortExpression="Experience" />
             <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
             <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
-            <asp:HyperLinkField DataNavigateUrlFields="UserId" DataNavigateUrlFormatString="edituser.aspx?UserId={0}" Text="Edit">
+            <asp:HyperLinkField DataNavigateUrlFields="UserId" DataNavigateUrlFormatString="edituser.aspx?UserId={0}" Text="Update">
             <ControlStyle CssClass="btn btn-warning" />
             <ItemStyle HorizontalAlign="Center" />
             </asp:HyperLinkField>

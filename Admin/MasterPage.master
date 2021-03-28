@@ -48,7 +48,7 @@
            <li><a href="Default.aspx">Admin</a></li>
            <li><a href="managecompany.aspx">Manage Company Account</a></li>
            <li><a href="manageuser.aspx">Manage User Account</a></li>
-           <li><a href="offers.aspx">View Offers</a></li>
+           <li><a href="offers.aspx">View Jobs</a></li>
 
          </ul>
          <ul class="nav navbar-nav navbar-right">

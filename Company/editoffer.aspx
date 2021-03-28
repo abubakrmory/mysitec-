@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
        <div class="container" style="margin-top: 50px;">  
-    <h2 class="text-center">Edit Offer</h2>
+    <h2 class="text-center">Company Manage Job</h2>
   <br />
 
          
@@ -19,7 +19,7 @@
                <asp:BoundField DataField="WorkDays" HeaderText="WorkDays" SortExpression="WorkDays" />
                <asp:BoundField DataField="WorkHours" HeaderText="WorkHours" SortExpression="WorkHours" />
                <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-               <asp:CommandField ButtonType="Button" ShowEditButton="True">
+               <asp:CommandField ButtonType="Button" ShowEditButton="True" EditText="Update">
                <ControlStyle CssClass="btn btn-info" />
                <ItemStyle HorizontalAlign="Center" />
                </asp:CommandField>

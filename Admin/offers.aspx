@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
      <div class="container-fluid" style="margin-top: 50px;">
-  <h2 class="text-center">View Offers</h2>
+  <h2 class="text-center">View Jobs</h2>
   <br />
          <asp:GridView ID="GridView1" cssClass="table table-bordered table-responsive" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" HorizontalAlign="Center" GridLines="Vertical">
              <AlternatingRowStyle BackColor="#CCCCCC" />

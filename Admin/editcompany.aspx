@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="container" style="margin-top: 50px;">  
-    <h2 class="text-center">Edit Company</h2>
+    <h2 class="text-center">Update Company</h2>
   <br />
 
          
@@ -17,7 +17,7 @@
                <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
                <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
                <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
-               <asp:CommandField ButtonType="Button" ShowEditButton="True">
+               <asp:CommandField ButtonType="Button" ShowEditButton="True" EditText="Update">
                <ControlStyle CssClass="btn btn-info" />
                <ItemStyle HorizontalAlign="Center" />
                </asp:CommandField>

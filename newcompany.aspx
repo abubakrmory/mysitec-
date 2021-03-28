@@ -63,11 +63,7 @@
                     </div>
                     <div class="col-md-1">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="Password is Required" Display="Dynamic" ControlToValidate="Password" ForeColor="Red" SetFocusOnError="True">*</asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Password must be At least onelower case letter,
-At least oneupper case letter,
-At leastspecial character,
-At least onenumber
-At least 8characters length" ControlToValidate="Password" Display="Dynamic" ForeColor="Red" SetFocusOnError="True" ValidationExpression="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!*@#$%^&amp;+=]).*$">*</asp:RegularExpressionValidator>    
+                            
                          </div>
                 </div>
                 <asp:Button ID="Button" runat="server" Text="Submit" class="btn btn-success btn-block" OnClick="Button_Click" />

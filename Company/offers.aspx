@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="container-fluid" style="margin-top: 50px;">
-  <h2 class="text-center">View Offers</h2>
+  <h2 class="text-center">View Jobs</h2>
   <br />
          <asp:GridView ID="GridView1" cssClass="table table-bordered table-responsive table-hover" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" Width="100%" HorizontalAlign="Center" DataKeyNames="OfferId" OnRowDataBound="GridView1_RowDataBound">
              <Columns>
@@ -18,7 +18,7 @@
                  <asp:BoundField DataField="WorkDays" HeaderText="WorkDays" SortExpression="WorkDays" />
                  <asp:BoundField DataField="WorkHours" HeaderText="WorkHours" SortExpression="WorkHours" />
                  <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
-                 <asp:HyperLinkField DataNavigateUrlFields="OfferId" DataNavigateUrlFormatString="editoffer.aspx?OfferId={0}" Text="Edit">
+                 <asp:HyperLinkField DataNavigateUrlFields="OfferId" DataNavigateUrlFormatString="editoffer.aspx?OfferId={0}" Text="Update">
                  <ControlStyle CssClass="btn btn-warning" />
                  <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
                  </asp:HyperLinkField>

@@ -19,7 +19,7 @@
             <asp:BoundField DataField="Address" HeaderText="Address" SortExpression="Address" />
             <asp:BoundField DataField="Username" HeaderText="Username" SortExpression="Username" />
             <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Password" />
-            <asp:HyperLinkField Text="Edit" ControlStyle-CssClass="btn btn-warning" DataNavigateUrlFields="CompanyId" DataNavigateUrlFormatString="editcompany.aspx?CompanyId={0}">
+            <asp:HyperLinkField Text="Update" ControlStyle-CssClass="btn btn-warning" DataNavigateUrlFields="CompanyId" DataNavigateUrlFormatString="editcompany.aspx?CompanyId={0}">
 <ControlStyle CssClass="btn btn-warning"></ControlStyle>
 
             <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />

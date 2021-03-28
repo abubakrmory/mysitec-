@@ -6,11 +6,11 @@
     <div class="container" style="margin-top: 30px;">
   <div class="row">
     <div class="col-md-6 col-md-offset-3 well">
-      <h2 class="text-center">Add New Offer</h2>
+      <h2 class="text-center">Add New Job</h2>
       <br />
       
         <div class="form-group row">
-          <label class="col-md-3 col-form-label">Offer Title</label>
+          <label class="col-md-3 col-form-label"> Job Title</label>
           <div class="col-md-8">
               <asp:TextBox ID="OfferTitle" class="form-control" placeholder="Enter Title"   runat="server" autocomplete="off"></asp:TextBox>            
           </div>
@@ -21,7 +21,7 @@
         </div>
 
         <div class="form-group row">
-          <label class="col-md-3 col-form-label">Offer Date</label>
+          <label class="col-md-3 col-form-label">Job Date</label>
           <div class="col-md-8">
               <asp:TextBox ID="Date" class="form-control" placeholder="Enter Offer Date"   runat="server" autocomplete="off" TextMode="Date"></asp:TextBox>
           </div>

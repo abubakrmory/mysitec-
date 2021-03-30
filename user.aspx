@@ -30,7 +30,9 @@
     </div>
        
       <a href="newuser.aspx" style="color:#000;" class="text-center">New User? Create Account Here.</a>
-        </div>
+       <br />
+                <a href="ForgetPasswordUser.aspx" style="color: #000;" class="text-center">Forget Password</a>
+         </div>
         
   </div>
 </div>

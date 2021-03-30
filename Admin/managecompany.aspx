@@ -24,10 +24,11 @@
 
             <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
             </asp:HyperLinkField>
-            <asp:CommandField ButtonType="Button" ShowDeleteButton="True">
+            <%--<asp:CommandField ButtonType="Button" ShowDeleteButton="True">
             <ControlStyle CssClass="btn btn-danger" />
             <ItemStyle HorizontalAlign="Center" />
-            </asp:CommandField>
+            </asp:CommandField>--%>
+            <asp:HyperLinkField DataNavigateUrlFields="CompanyId" ControlStyle-CssClass="btn btn-danger" DataNavigateUrlFormatString="deletecompany.aspx?CompanyId={0}"  Text="Delete" />
         </Columns>
         <HeaderStyle CssClass="table table-Danger" HorizontalAlign="Center" />
 
@@ -41,7 +42,7 @@
 </div> <!-- container -->
      <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT CompanyId , Name, Phone, Email, Address, Username, Password FROM company" DeleteCommand="DELETE FROM [company] WHERE [CompanyId ] = @original_CompanyId_" InsertCommand="INSERT INTO [company] ([Name], [Phone], [Email], [Address], [Username], [Password]) VALUES (@Name, @Phone, @Email, @Address, @Username, @Password)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [company] SET [Name] = @Name, [Phone] = @Phone, [Email] = @Email, [Address] = @Address, [Username] = @Username, [Password] = @Password WHERE [CompanyId ] = @original_CompanyId_">
          <DeleteParameters>
-             <asp:Parameter Name="original_CompanyId_" Type="Int32" />
+             <asp:ControlParameter ControlID="GridView1" DefaultValue="CompanyId" Name="original_CompanyId_" PropertyName="SelectedValue" Type="Int32" />
          </DeleteParameters>
          <InsertParameters>
              <asp:Parameter Name="Name" Type="String" />

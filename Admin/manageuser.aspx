@@ -25,10 +25,10 @@
             <ControlStyle CssClass="btn btn-warning" />
             <ItemStyle HorizontalAlign="Center" />
             </asp:HyperLinkField>
-            <asp:CommandField ButtonType="Button" ShowDeleteButton="True">
-            <ControlStyle CssClass="btn btn-danger" />
+            <asp:HyperLinkField DataNavigateUrlFields="UserId" DataNavigateUrlFormatString="deleteuser.aspx?UserId={0}" Text="Delete">
+             <ControlStyle CssClass="btn btn-danger" />
             <ItemStyle HorizontalAlign="Center" />
-            </asp:CommandField>
+            </asp:HyperLinkField>
         </Columns>
         <HeaderStyle CssClass="table table-Danger" HorizontalAlign="Center" />
 

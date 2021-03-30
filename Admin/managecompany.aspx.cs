@@ -16,8 +16,8 @@ public partial class Admin_managecompany : System.Web.UI.Page
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            Button db = (Button)e.Row.Cells[8].Controls[0];
-            db.OnClientClick = "return confirm('Are you certain you want to delete this row?');";
+            //Button db = (Button)e.Row.Cells[8].Controls[0];
+            //db.OnClientClick = "return confirm('Are you certain you want to delete this row?');";
         }
     }
 }
